@@ -1,0 +1,30 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class arrays {
+
+    public static void main (String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int [] arr1 = new int [3];
+        int [] arr2 = {11,12,13,14,15};
+        String [] arr3 = {"Sagor","Shamir","Amit"};
+
+
+        System.out.println("Enter your array size: ");
+        int arrsize = sc.nextInt();
+        int [] arr4 = new int [arrsize];
+
+        for(int c = 0; arr4.length> c ; c++){
+            System.out.println("Enter number: ");
+            int nm = sc.nextInt();
+            arr4 [c] = nm;
+            nm = 0;
+        }
+
+        System.out.println(Arrays.toString(arr4));
+       
+
+
+
+    }
+}
