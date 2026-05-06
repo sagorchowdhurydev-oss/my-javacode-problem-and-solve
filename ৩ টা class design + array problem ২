@@ -1,0 +1,93 @@
+import java.util.Arrays;
+public class student_4 {
+    public String name;
+    public int id;
+    public Course [] CourseDtls = new Course[5];
+    public int coursecount;
+    public int [] arr1 = {15,16,17,15,62};
+
+    public student_4(String nm, int Id){
+        name= nm;
+        id =Id;
+    }
+
+    public void addCourse(Course C){
+        CourseDtls [coursecount] = C;
+        coursecount++;
+        
+    }
+     public void addCourse(Course C1, Course C2){
+        addCourse(C1);
+        addCourse(C2); 
+    }
+    public void addCourse(Course C1, Course C2, Course C3){
+        addCourse(C1);
+        addCourse(C2); 
+        addCourse(C3);
+    }
+
+
+
+    public void showDetails(){
+        System.out.println("Student name: "+ name);
+        System.out.println("ID: "+id);
+        System.out.println("----------------------------------");
+        System.out.println("Course Taken: ");
+
+        for(int c = 0 ; coursecount>c; c++){
+        System.out.println(CourseDtls[c].courseCode +" "+ CourseDtls[c].courseTitle) ;
+        }
+        System.out.println(Arrays.toString(CourseDtls));
+        System.out.println(Arrays.toString(arr1));
+        System.out.println("===============================");
+
+    }
+
+    
+}
+
+
+// public class Course {
+//     public String courseCode;
+//     public String courseTitle = "Not Setteled";
+
+//     public Course (String code, String title){
+//         courseCode = code;
+//         courseTitle = title;
+
+//     }
+
+//     public Course (String code){
+//         courseCode = code;
+//     }
+    
+// }
+
+// public class Tester
+// {
+//     public static void main (String  [] args)
+//     {
+//         student_4 s1 = new student_4("Bob", 11);
+//         student_4 s2 = new student_4("Carol", 33);
+//         student_4 s3 = new student_4("Sagor", 37);
+//         Course c1 = new Course("CSE111","Object oriented Programming");
+//         Course c2 = new Course("MAT120");
+//         Course c3 = new Course("Bus102","Business course");
+//         s1.addCourse(c1);
+//         s1.addCourse(c2);
+//         s1.addCourse(c3);
+//         s1.showDetails();
+
+
+//         s2.addCourse(c1,c2);
+//         s2.showDetails();
+//         s2.addCourse(c3);
+//         s2.showDetails();
+
+//         s3.addCourse(c1,c2,c3);
+//         s3.showDetails();
+
+
+        
+//     }
+// }
